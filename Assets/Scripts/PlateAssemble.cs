@@ -8,7 +8,7 @@ public class PlateAssemble : MonoBehaviour
     [SerializeField] private Transform pivot;
 
     [Header("Ingredients on plate")]
-    [SerializeField] private List<GameObject> onPlateObj;
+    public List<GameObject> onPlateObj;
 
     void Start()
     {

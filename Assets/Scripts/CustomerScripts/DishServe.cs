@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DishServe : MonoBehaviour
 {
-    [SerializeField] GameObject[] plateIngr;
-
+    [SerializeField] private List<GameObject> plateIngr;
+    [SerializeField] private CustomerStateManager customer;
 
     void OnTriggerEnter(Collider other)
     {
@@ -16,12 +16,15 @@ public class DishServe : MonoBehaviour
             other.GetComponent<BoxCollider>().enabled = false;
             other.GetComponent<Rigidbody>().isKinematic = true;
             other.transform.localPosition = new Vector3(0, 0, 0);
+            other.transform.localRotation = new Quaternion(0, 0, 0, 0);
 
             GetPlateIngr(other.gameObject);
+            customer.SwitchState(customer.EatingState);
         }
     }
 
     void GetPlateIngr(GameObject plate)
     {
+        plateIngr = plate.GetComponentInChildren<PlateAssemble>().onPlateObj;
     }
 }
