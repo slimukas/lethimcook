@@ -7,6 +7,7 @@ public class CustomerEatState : CustomerBaseState
 
     public override void EnterState(CustomerStateManager customer)
     {
+        Debug.Log("Eating...");
 
     }
 

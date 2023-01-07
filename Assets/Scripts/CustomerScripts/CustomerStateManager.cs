@@ -8,6 +8,7 @@ public class CustomerStateManager : MonoBehaviour
     CustomerBaseState currentState;
     public CustomerWaitingState WaitingState = new CustomerWaitingState();
     public CustomerOrderState OrderingState = new CustomerOrderState();
+    public CustomerEatState EatingState = new CustomerEatState();
 
     void Start()
     {

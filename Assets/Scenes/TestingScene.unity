@@ -321,6 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plateIngr: []
+  customer: {fileID: 855405363}
 --- !u!1 &471775463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,7 +1724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8332689778882276366, guid: 7b0b224704f5093429c83688e12c53ca, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8332689778882276366, guid: 7b0b224704f5093429c83688e12c53ca, type: 3}
       propertyPath: m_LocalRotation.z
