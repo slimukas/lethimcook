@@ -5,7 +5,7 @@ using UnityEngine;
 public class CustomerOrderState : CustomerBaseState
 {
     [SerializeField] private Dish dish;
-    [SerializeField] private Order ingredient;
+    [SerializeField] private CustomerOrder ingredient;
     private bool isImportant;
     private int previousImportant = -1;
     private int numberOfToppings;
@@ -16,7 +16,7 @@ public class CustomerOrderState : CustomerBaseState
     {
         Debug.Log("Ordering...");
 
-        ingredient = customer.gameObject.GetComponent(typeof(Order)) as Order;
+        ingredient = customer.gameObject.GetComponent(typeof(CustomerOrder)) as CustomerOrder;
         dish = customer.GiveMenu();
         GenerateOrder(dish);
         customer.SwitchState(customer.WaitingState);

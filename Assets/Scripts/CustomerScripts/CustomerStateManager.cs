@@ -18,8 +18,8 @@ public class CustomerStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
-
     }
+
     public void OnTriggerStay(Collider other)
     {
         currentState.OnTriggerStay(this, other);

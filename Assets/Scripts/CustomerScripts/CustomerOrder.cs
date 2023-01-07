@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Burger : Order
+public class CustomerOrder : MonoBehaviour
 {
+    public List<GameObject> order;
 
 }
