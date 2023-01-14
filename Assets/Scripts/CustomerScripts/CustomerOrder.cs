@@ -6,4 +6,7 @@ public class CustomerOrder : MonoBehaviour
 {
     public List<GameObject> order;
 
+    public List<GameObject> preparedOrder;
+    
+
 }

@@ -7,11 +7,14 @@ public class DishServe : MonoBehaviour
     [SerializeField] private List<GameObject> plateIngr;
     [SerializeField] private CustomerStateManager customer;
 
+    [SerializeField] private CustomerOrder ingredient;
+
     void OnTriggerEnter(Collider other)
     {
+        ingredient = customer.gameObject.GetComponent(typeof(CustomerOrder)) as CustomerOrder;
+
         if (other.gameObject.tag == "Plate")
         {
-
             other.transform.parent = transform;
             other.GetComponent<BoxCollider>().enabled = false;
             other.GetComponent<Rigidbody>().isKinematic = true;
@@ -19,6 +22,7 @@ public class DishServe : MonoBehaviour
             other.transform.localRotation = new Quaternion(0, 0, 0, 0);
 
             GetPlateIngr(other.gameObject);
+            ingredient.preparedOrder = plateIngr;
             customer.SwitchState(customer.EatingState);
         }
     }

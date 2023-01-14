@@ -27,7 +27,7 @@ public class PlateAssemble : MonoBehaviour
             other.GetComponent<Rigidbody>().isKinematic = true;
 
             other.transform.localPosition = pivot.transform.localPosition;
-            pivot.transform.localPosition = new Vector3(transform.localPosition.x, pivot.transform.localPosition.y + other.GetComponent<IngredientParam>().Height(), transform.localPosition.z);
+            pivot.transform.localPosition = new Vector3(transform.localPosition.x, pivot.transform.localPosition.y + other.GetComponent<IngredientParam>().height, transform.localPosition.z);
             onPlateObj.Add(other.gameObject);
 
         }

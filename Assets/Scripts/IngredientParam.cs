@@ -5,10 +5,6 @@ using UnityEngine;
 public class IngredientParam : MonoBehaviour
 {
     [Header("Ingredient parameters")]
-    [SerializeField] private float height;
-
-    public float Height()
-    {
-        return height;
-    }
+    public float height;
+    public string id;
 }

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CustomerOrderState : CustomerBaseState
 {
-    [SerializeField] private Dish dish;
-    [SerializeField] private CustomerOrder ingredient;
+    private Dish dish;
+    private CustomerOrder ingredient;
+
     private bool isImportant;
     private int previousImportant = -1;
     private int numberOfToppings;
