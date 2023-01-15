@@ -6,6 +6,7 @@ public class CustomerOrderState : CustomerBaseState
 {
     private Dish dish;
     private CustomerOrder ingredient;
+    private OrderTicket orderTicket;
 
     private bool isImportant;
     private int previousImportant = -1;
@@ -18,9 +19,12 @@ public class CustomerOrderState : CustomerBaseState
         Debug.Log("Ordering...");
 
         ingredient = customer.gameObject.GetComponent(typeof(CustomerOrder)) as CustomerOrder;
+        orderTicket = customer.gameObject.GetComponent(typeof(OrderTicket)) as OrderTicket;
+
         dish = customer.GiveMenu();
         GenerateOrder(dish);
         customer.SwitchState(customer.WaitingState);
+        orderTicket.GenerateTicket();
     }
 
     public override void UpdateState(CustomerStateManager customer)

@@ -7,7 +7,7 @@ public class DishServe : MonoBehaviour
     [SerializeField] private List<GameObject> plateIngr;
     [SerializeField] private CustomerStateManager customer;
 
-    [SerializeField] private CustomerOrder ingredient;
+    public CustomerOrder ingredient;
 
     void OnTriggerEnter(Collider other)
     {
