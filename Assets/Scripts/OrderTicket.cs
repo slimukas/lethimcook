@@ -6,6 +6,7 @@ public class OrderTicket : MonoBehaviour
 {
     [SerializeField] private CustomerOrder ingredient;
     [SerializeField] private GameObject orderTicket;
+    [SerializeField] private Transform ticketPosition;
     private SpriteRenderer ticketSprite;
     private Sprite orderSprite;
 
@@ -28,7 +29,7 @@ public class OrderTicket : MonoBehaviour
             Debug.Log(ticketSprite + " -- " + orderSprite);
 
         }
-        Instantiate(orderTicket, transform.position, Quaternion.identity);
+        Instantiate(orderTicket, new Vector3(ticketPosition.position.x, ticketPosition.position.y + 0.5f, ticketPosition.position.z), Quaternion.identity);
 
 
     }

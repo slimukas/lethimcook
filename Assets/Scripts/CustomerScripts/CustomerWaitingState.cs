@@ -33,7 +33,7 @@ public class CustomerWaitingState : CustomerBaseState
     {
         if (collider.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && hadOrdered == false)
         {
-            customer.SwitchState(customer.OrderingState);
+            customer.SetState(CustomerState.Ordering);
             hadOrdered = true;
         }
     }

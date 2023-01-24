@@ -21,9 +21,9 @@ public class CustomerOrderState : CustomerBaseState
         ingredient = customer.gameObject.GetComponent(typeof(CustomerOrder)) as CustomerOrder;
         orderTicket = customer.gameObject.GetComponent(typeof(OrderTicket)) as OrderTicket;
 
-        dish = customer.GiveMenu();
+        dish = customer.GetMenu();
         GenerateOrder(dish);
-        customer.SwitchState(customer.WaitingState);
+        customer.SetState(CustomerState.Waiting);
         orderTicket.GenerateTicket();
     }
 

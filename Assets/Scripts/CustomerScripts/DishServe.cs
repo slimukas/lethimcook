@@ -23,7 +23,8 @@ public class DishServe : MonoBehaviour
 
             GetPlateIngr(other.gameObject);
             ingredient.preparedOrder = plateIngr;
-            customer.SwitchState(customer.EatingState);
+            customer.SetState(CustomerState.Eating);
+
         }
     }
 

@@ -1,39 +1,69 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+public enum CustomerState { Waiting, Ordering, Eating }
 
 public class CustomerStateManager : MonoBehaviour
 {
-    [SerializeField] private Menu dish;
-    CustomerBaseState currentState;
-    public CustomerWaitingState WaitingState = new CustomerWaitingState();
-    public CustomerOrderState OrderingState = new CustomerOrderState();
-    public CustomerEatState EatingState = new CustomerEatState();
+    // Serialized Fields
 
-    void Start()
+    [SerializeField] private Menu menu; //? Kodel jis SerializedField?
+
+    // Private fields
+
+    private CustomerBaseState currentState;
+
+    // Properties
+
+    public CustomerOrder CustomerOrder { get; private set; }
+    public OrderTicket OrderTicket { get; private set; }
+
+
+    public Dish GetMenu()
     {
-        currentState = WaitingState;
-        currentState.EnterState(this);
+        return menu.dish[Random.Range(0, menu.dish.Length)];
     }
 
-    void Update()
+    public void SetState(CustomerState state)
+    {
+        CustomerBaseState newState = null;
+
+        switch (state)
+        {
+            case CustomerState.Waiting:
+                newState = new CustomerWaitingState();
+                break;
+            case CustomerState.Ordering:
+                newState = new CustomerOrderState();
+                break;
+            case CustomerState.Eating:
+                newState = new CustomerEatState();
+                break;
+        }
+
+        if (newState != null)
+        {
+            currentState = newState;
+            currentState.EnterState(this);
+        }
+    }
+
+    // MonoBehaviour
+    private void Awake()
+    {
+        CustomerOrder = GetComponentInChildren<CustomerOrder>();
+        OrderTicket = GetComponentInChildren<OrderTicket>();
+
+        SetState(CustomerState.Waiting);
+    }
+
+    private void Update()
     {
         currentState.UpdateState(this);
     }
 
-    public void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         currentState.OnTriggerStay(this, other);
     }
 
-    public void SwitchState(CustomerBaseState state)
-    {
-        currentState = state;
-        state.EnterState(this);
-    }
-
-    public Dish GiveMenu()
-    {
-        return dish.dish[Random.Range(0, dish.dish.Length)];
-    }
 }
