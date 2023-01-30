@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum CustomerState { Waiting, Ordering, Eating }
+public enum CustomerState { Waiting, Ordering, Eating, Walking }
 
 public class CustomerStateManager : MonoBehaviour
 {
@@ -38,6 +38,9 @@ public class CustomerStateManager : MonoBehaviour
             case CustomerState.Eating:
                 newState = new CustomerEatState();
                 break;
+            case CustomerState.Walking:
+                newState = new CustomerWalkingState();
+                break;
         }
 
         if (newState != null)
@@ -53,7 +56,7 @@ public class CustomerStateManager : MonoBehaviour
         CustomerOrder = GetComponentInChildren<CustomerOrder>();
         OrderTicket = GetComponentInChildren<OrderTicket>();
 
-        SetState(CustomerState.Waiting);
+        SetState(CustomerState.Walking);
     }
 
     private void Update()
