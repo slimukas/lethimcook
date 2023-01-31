@@ -14,6 +14,10 @@ public class CustomerEatState : CustomerBaseState
         customerOrder = customer.gameObject.GetComponent(typeof(CustomerOrder)) as CustomerOrder;
         EvaluateDish(customerOrder);
         Debug.Log(rating);
+
+        EatFood(customerOrder);
+        customer.SetState(CustomerState.Leaving);
+
     }
 
     public override void UpdateState(CustomerStateManager customer)
@@ -50,5 +54,13 @@ public class CustomerEatState : CustomerBaseState
 
     }
 
+    private void EatFood(CustomerOrder customerOrder)
+    {
+        Debug.Log("Eating");
+        for (int i = 0; i < customerOrder.order.Count; i++)
+        {
+            GameObject.Destroy(customerOrder.preparedOrder[i]);
 
+        }
+    }
 }

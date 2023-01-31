@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomerEnteringState : CustomerBaseState
+public class CustomerLeavingState : CustomerBaseState
 {
     float t;
     Vector3 startPosition;
@@ -11,19 +11,18 @@ public class CustomerEnteringState : CustomerBaseState
 
     public override void EnterState(CustomerStateManager customer)
     {
-        Debug.Log("Entering...");
+        Debug.Log("Leaving...");
         startPosition = customer.transform.localPosition;
     }
 
     public override void UpdateState(CustomerStateManager customer)
     {
         t += Time.deltaTime / timeToReachTarget;
-        customer.transform.localPosition = Vector3.Lerp(startPosition, new Vector3(0, 0, 0), t);
+        customer.transform.localPosition = Vector3.Lerp(startPosition, customer.spawnPosition, t);
 
-        if (customer.transform.localPosition == new Vector3(0, 0, 0))
+        if (customer.transform.localPosition == customer.spawnPosition)
         {
-            customer.SetState(CustomerState.Waiting);
-
+            GameObject.Destroy(customer.gameObject);
         }
     }
 

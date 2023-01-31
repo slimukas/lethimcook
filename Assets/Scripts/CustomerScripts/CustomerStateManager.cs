@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum CustomerState { Waiting, Ordering, Eating, Walking }
+public enum CustomerState { Waiting, Ordering, Eating, Entering, Leaving }
 
 public class CustomerStateManager : MonoBehaviour
 {
@@ -11,6 +11,10 @@ public class CustomerStateManager : MonoBehaviour
     // Private fields
 
     private CustomerBaseState currentState;
+
+    // Public fields
+
+    public Vector3 spawnPosition;
 
     // Properties
 
@@ -38,8 +42,11 @@ public class CustomerStateManager : MonoBehaviour
             case CustomerState.Eating:
                 newState = new CustomerEatState();
                 break;
-            case CustomerState.Walking:
-                newState = new CustomerWalkingState();
+            case CustomerState.Entering:
+                newState = new CustomerEnteringState();
+                break;
+            case CustomerState.Leaving:
+                newState = new CustomerLeavingState();
                 break;
         }
 
@@ -53,10 +60,12 @@ public class CustomerStateManager : MonoBehaviour
     // MonoBehaviour
     private void Awake()
     {
+        spawnPosition = this.transform.localPosition;
+
         CustomerOrder = GetComponentInChildren<CustomerOrder>();
         OrderTicket = GetComponentInChildren<OrderTicket>();
 
-        SetState(CustomerState.Walking);
+        SetState(CustomerState.Entering);
     }
 
     private void Update()
