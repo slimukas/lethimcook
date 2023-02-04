@@ -12,15 +12,17 @@ public class CustomerEnteringState : CustomerBaseState
     public override void EnterState(CustomerStateManager customer)
     {
         Debug.Log("Entering...");
-        startPosition = customer.transform.localPosition;
+        startPosition = customer.startPosition;
+        target = new Vector3(0, customer.transform.position.y, 0);
+        Debug.Log(target);
     }
 
     public override void UpdateState(CustomerStateManager customer)
     {
         t += Time.deltaTime / timeToReachTarget;
-        customer.transform.localPosition = Vector3.Lerp(startPosition, new Vector3(0, 0, 0), t);
+        customer.transform.localPosition = Vector3.Lerp(startPosition, target, t);
 
-        if (customer.transform.localPosition == new Vector3(0, 0, 0))
+        if (customer.transform.localPosition == target)
         {
             customer.SetState(CustomerState.Waiting);
 

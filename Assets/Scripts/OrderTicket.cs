@@ -23,10 +23,10 @@ public class OrderTicket : MonoBehaviour
 
             ticketSprite = orderTicket.transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>();
             orderSprite = ingredient.order[i].gameObject.GetComponent<IngredientParam>().ingredientImage;
-            Debug.Log(ticketSprite + " - " + orderSprite);
+            // Debug.Log(ticketSprite + " - " + orderSprite);
 
             ticketSprite.sprite = orderSprite;
-            Debug.Log(ticketSprite + " -- " + orderSprite);
+            // Debug.Log(ticketSprite + " -- " + orderSprite);
 
         }
         Instantiate(orderTicket, new Vector3(ticketPosition.position.x, ticketPosition.position.y + 0.5f, ticketPosition.position.z), Quaternion.identity);

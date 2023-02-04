@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plateIngr: []
   customer: {fileID: 152451304319153103}
-  ingredient: {fileID: 0}
+  ingredient: {fileID: 152451304319153092}
 --- !u!1 &152451304319153102
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 152451305091414699}
-  spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &152451304319153092
 MonoBehaviour:
   m_ObjectHideFlags: 0

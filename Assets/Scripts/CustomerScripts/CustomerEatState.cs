@@ -15,7 +15,7 @@ public class CustomerEatState : CustomerBaseState
         EvaluateDish(customerOrder);
         Debug.Log(rating);
 
-        EatFood(customerOrder);
+        //EatFood(customerOrder);
         customer.SetState(CustomerState.Leaving);
 
     }
@@ -56,11 +56,6 @@ public class CustomerEatState : CustomerBaseState
 
     private void EatFood(CustomerOrder customerOrder)
     {
-        Debug.Log("Eating");
-        for (int i = 0; i < customerOrder.order.Count; i++)
-        {
-            GameObject.Destroy(customerOrder.preparedOrder[i]);
 
-        }
     }
 }

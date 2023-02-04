@@ -5,7 +5,7 @@ using UnityEngine;
 public class CustomerSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject customerPrefab;
-    [SerializeField] private Transform spawnPoint;
+    public Transform spawnPoint;
 
     void Start()
     {

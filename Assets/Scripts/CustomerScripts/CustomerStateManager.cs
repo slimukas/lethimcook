@@ -14,7 +14,8 @@ public class CustomerStateManager : MonoBehaviour
 
     // Public fields
 
-    public Vector3 spawnPosition;
+    public Vector3 startPosition;
+    public bool hadOrdered;
 
     // Properties
 
@@ -60,8 +61,8 @@ public class CustomerStateManager : MonoBehaviour
     // MonoBehaviour
     private void Awake()
     {
-        spawnPosition = this.transform.localPosition;
-
+        startPosition = this.transform.localPosition;
+        hadOrdered = false;
         CustomerOrder = GetComponentInChildren<CustomerOrder>();
         OrderTicket = GetComponentInChildren<OrderTicket>();
 

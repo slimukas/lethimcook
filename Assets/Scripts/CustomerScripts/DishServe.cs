@@ -20,6 +20,8 @@ public class DishServe : MonoBehaviour
             other.GetComponent<Rigidbody>().isKinematic = true;
             other.transform.localPosition = new Vector3(0, 0, 0);
             other.transform.localRotation = new Quaternion(0, 0, 0, 0);
+            other.transform.parent = null;
+
 
             GetPlateIngr(other.gameObject);
             ingredient.preparedOrder = plateIngr;

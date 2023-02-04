@@ -7,12 +7,13 @@ public class CustomerWaitingState : CustomerBaseState
 
     float startTime = 30f;
     float currenTime = 0;
-    bool hadOrdered = false;
+    bool hadOrdered;
 
     public override void EnterState(CustomerStateManager customer)
     {
         Debug.Log("Waiting...");
         currenTime = startTime;
+        hadOrdered = customer.hadOrdered;
     }
 
     public override void UpdateState(CustomerStateManager customer)
