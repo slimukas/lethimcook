@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 408497125327670294}
   - component: {fileID: 8332689778882276365}
   - component: {fileID: 3319080285717527779}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}

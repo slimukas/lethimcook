@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlateAssemble : MonoBehaviour
 {
-    [Header("Ingredient place pivot")]
-    [SerializeField] private Transform pivot;
+    [SerializeField] private Vector3 pivot;
+    private Vector3 firstPosition;
+    private Vector3 nextPosition;
 
     [Header("Ingredients on plate")]
     public List<GameObject> onPlateObj;
@@ -13,6 +14,8 @@ public class PlateAssemble : MonoBehaviour
     void Start()
     {
         onPlateObj = new List<GameObject>();
+        firstPosition = pivot;
+        nextPosition = firstPosition;
 
     }
 
@@ -21,19 +24,40 @@ public class PlateAssemble : MonoBehaviour
     {
         if (other.gameObject.tag == "Ingredient" && !onPlateObj.Contains(other.gameObject))
         {
-
+            Vector3 size;
+            onPlateObj.RemoveAll(item => item == null);
+            onPlateObj.Add(other.gameObject);
             other.transform.parent = transform;
-            other.GetComponent<BoxCollider>().enabled = false;
             other.GetComponent<Rigidbody>().isKinematic = true;
 
-            other.transform.localPosition = pivot.transform.localPosition;
-            other.transform.localRotation = new Quaternion(0, 0, 0, 0);
-            pivot.transform.localPosition = new Vector3(transform.localPosition.x, pivot.transform.localPosition.y + other.GetComponent<IngredientParam>().height, transform.localPosition.z);
-            onPlateObj.Add(other.gameObject);
+            if (onPlateObj.Count <= 1)
+            {
+                size = other.transform.localScale;
+                other.transform.localPosition = new Vector3(firstPosition.x, firstPosition.y + (size.y / 2), firstPosition.z);
+                other.transform.localRotation = new Quaternion(0, 0, 0, 0);
+
+                nextPosition = new Vector3(firstPosition.x, firstPosition.y + size.y, firstPosition.z);
+                Debug.Log(nextPosition.ToString());
+
+            }
+
+            else
+            {
+                size = other.transform.localScale;
+
+
+                other.transform.localPosition = new Vector3(nextPosition.x, nextPosition.y + (size.y / 2), nextPosition.z);
+                other.transform.localRotation = new Quaternion(0, 0, 0, 0);
+
+                nextPosition = new Vector3(nextPosition.x, nextPosition.y + size.y, nextPosition.z); ;
+            }
 
         }
+
+
+
     }
-
-
-
 }
+
+
+
