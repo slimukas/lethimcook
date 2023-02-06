@@ -16,6 +16,8 @@ public class CustomerStateManager : MonoBehaviour
 
     public Vector3 startPosition;
     public bool hadOrdered;
+    public GameObject mealHolder;
+
 
     // Properties
 

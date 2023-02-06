@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1816690402226482547}
   - component: {fileID: -5666799606464998614}
   - component: {fileID: -7597692866311310737}
+  - component: {fileID: -2713217249327293184}
   m_Layer: 0
   m_Name: OrderTicket
   m_TagString: Untagged
@@ -233,6 +234,24 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &-2713217249327293184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922516742831097573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c93fcf15b978c44b5a7c5abaff7f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height: 0
+  topPivot: 0
+  bottomPivot: 0
+  id: 
+  ingredientImage: {fileID: 0}
+  canDelete: 1
 --- !u!1 &6842395830057202750
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,7 +569,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8c5dd543b15814bbeb5f757f83fcf5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e60fac7afd8af44e822f56cb97a042e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -632,7 +651,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4e8c5dd543b15814bbeb5f757f83fcf5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -640,6 +659,6 @@ SpriteRenderer:
   m_Size: {x: 5, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

@@ -6,7 +6,7 @@ public class PlateLock : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Placable")
+        if (other.gameObject.tag == "Placable" && gameObject.GetComponent<PlateStates>().isClean == true)
         {
             this.transform.parent = other.transform;
             this.GetComponent<BoxCollider>().enabled = false;

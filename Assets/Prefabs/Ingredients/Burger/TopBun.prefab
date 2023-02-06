@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1979157882548869301}
   - component: {fileID: 1979157882548869296}
   - component: {fileID: -7549214322970963988}
-  - component: {fileID: -6769072029682590054}
   m_Layer: 6
   m_Name: TopBun
   m_TagString: Ingredient
@@ -134,6 +133,7 @@ MonoBehaviour:
   bottomPivot: -0.6
   id: topBun
   ingredientImage: {fileID: 21300000, guid: 4e8c5dd543b15814bbeb5f757f83fcf5, type: 3}
+  canDelete: 1
 --- !u!114 &-7549214322970963988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,19 +249,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &-6769072029682590054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1979157882548869302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf765f21b84b5b45af4668e9638d676, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canDelete: 1
 --- !u!1 &4098986666100302997
 GameObject:
   m_ObjectHideFlags: 0

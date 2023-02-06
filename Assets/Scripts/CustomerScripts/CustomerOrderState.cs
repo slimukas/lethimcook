@@ -25,6 +25,8 @@ public class CustomerOrderState : CustomerBaseState
         GenerateOrder(dish);
         customer.SetState(CustomerState.Waiting);
         orderTicket.GenerateTicket();
+
+        customer.mealHolder.SetActive(true);
     }
 
     public override void UpdateState(CustomerStateManager customer)

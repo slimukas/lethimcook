@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &299331602
 Transform:
   m_ObjectHideFlags: 0
@@ -124,6 +124,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 152451305091414699}
+  startPosition: {x: 0, y: 0, z: 0}
+  hadOrdered: 0
+  mealHolder: {fileID: 299331601}
 --- !u!114 &152451304319153092
 MonoBehaviour:
   m_ObjectHideFlags: 0

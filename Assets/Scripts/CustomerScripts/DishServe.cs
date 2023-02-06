@@ -13,10 +13,11 @@ public class DishServe : MonoBehaviour
     {
         ingredient = customer.gameObject.GetComponent(typeof(CustomerOrder)) as CustomerOrder;
 
-        if (other.gameObject.tag == "Plate")
+        if (other.gameObject.tag == "Plate" && other.GetComponent<PlateStates>().isClean == true)
         {
             GetPlateIngr(other.gameObject);
             ingredient.preparedOrder = plateIngr;
+            other.GetComponent<PlateStates>().Dirty();
             customer.SetState(CustomerState.Eating);
         }
     }

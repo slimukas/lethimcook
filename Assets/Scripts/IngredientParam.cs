@@ -12,4 +12,6 @@ public class IngredientParam : MonoBehaviour
 
     public string id;
     public Sprite ingredientImage;
+
+    public bool canDelete;
 }
