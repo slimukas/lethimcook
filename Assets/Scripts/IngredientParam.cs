@@ -5,11 +5,6 @@ using UnityEngine;
 public class IngredientParam : MonoBehaviour
 {
     [Header("Ingredient parameters")]
-    public float height;
-
-    public float topPivot;
-    public float bottomPivot;
-
     public string id;
     public Sprite ingredientImage;
 

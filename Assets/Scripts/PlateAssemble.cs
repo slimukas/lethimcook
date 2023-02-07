@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlateAssemble : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class PlateAssemble : MonoBehaviour
             Vector3 size;
             onPlateObj.RemoveAll(item => item == null);
             onPlateObj.Add(other.gameObject);
+
+            Destroy(other.GetComponent<XRGrabInteractable>());
             other.transform.parent = transform;
             other.GetComponent<Rigidbody>().isKinematic = true;
 
