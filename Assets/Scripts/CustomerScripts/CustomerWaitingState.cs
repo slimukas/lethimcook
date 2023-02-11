@@ -5,7 +5,7 @@ using UnityEngine;
 public class CustomerWaitingState : CustomerBaseState
 {
 
-    float startTime = 30f;
+    float startTime = 30;
     float currenTime = 0;
     bool hadOrdered;
 

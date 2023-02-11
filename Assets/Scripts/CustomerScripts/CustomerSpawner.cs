@@ -5,19 +5,28 @@ using UnityEngine;
 public class CustomerSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject customerPrefab;
+    [SerializeField] private bool canSpawn;
     public Transform spawnPoint;
 
-    void Start()
+
+    private void Awake()
     {
-        Debug.Log(transform.childCount);
+        canSpawn = false;
+        Game.Current.room.OnDoorOpened += Spawn;
+    }
+    private void Spawn()
+    {
+        canSpawn = true;
     }
 
-    void Update()
+    private void Update()
     {
-        if (transform.childCount < 2)
+        if (transform.childCount < 2 && canSpawn)
         {
             GameObject instance = Instantiate(customerPrefab, spawnPoint.transform.position, Quaternion.identity);
             instance.transform.parent = transform;
+            instance.gameObject.SetActive(true);
+
         }
     }
 

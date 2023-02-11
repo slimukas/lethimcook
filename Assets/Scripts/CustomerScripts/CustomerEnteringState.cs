@@ -14,7 +14,6 @@ public class CustomerEnteringState : CustomerBaseState
         Debug.Log("Entering...");
         startPosition = customer.startPosition;
         target = new Vector3(0, customer.transform.position.y, 0);
-        Debug.Log(target);
     }
 
     public override void UpdateState(CustomerStateManager customer)
