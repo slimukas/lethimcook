@@ -23,6 +23,7 @@ public class CustomerStateManager : MonoBehaviour
 
 
 
+
     // Properties
 
     public CustomerOrder CustomerOrder { get; private set; }
