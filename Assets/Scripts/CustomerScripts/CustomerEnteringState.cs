@@ -7,11 +7,13 @@ public class CustomerEnteringState : CustomerBaseState
     float t;
     Vector3 startPosition;
     Vector3 target;
-    float timeToReachTarget = 5f;
+    float timeToReachTarget;
 
     public override void EnterState(CustomerStateManager customer)
     {
         Debug.Log("Entering...");
+
+        timeToReachTarget = Random.Range(2f, 5f);
         startPosition = customer.startPosition;
         target = new Vector3(0, customer.transform.position.y, 0);
     }

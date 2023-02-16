@@ -19,6 +19,7 @@ public class CustomerStateManager : MonoBehaviour
     public GameObject mealHolder;
 
 
+
     // Properties
 
     public CustomerOrder CustomerOrder { get; private set; }

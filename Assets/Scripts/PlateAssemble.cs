@@ -35,24 +35,27 @@ public class PlateAssemble : MonoBehaviour
 
             if (onPlateObj.Count <= 1)
             {
-                size = other.transform.localScale;
-                other.transform.localPosition = new Vector3(firstPosition.x, firstPosition.y + (size.y / 2), firstPosition.z);
+                size = other.GetComponent<BoxCollider>().size;
+                other.transform.localPosition = new Vector3(firstPosition.x, firstPosition.y + 0.1f, firstPosition.z);
                 other.transform.localRotation = new Quaternion(0, 0, 0, 0);
 
-                nextPosition = new Vector3(firstPosition.x, firstPosition.y + size.y, firstPosition.z);
+                nextPosition = new Vector3(firstPosition.x, firstPosition.y + (size.y / 2) + 0.1f, firstPosition.z);
                 Debug.Log(nextPosition.ToString());
 
             }
 
             else
             {
-                size = other.transform.localScale;
+                size = other.GetComponent<BoxCollider>().size;
 
 
-                other.transform.localPosition = new Vector3(nextPosition.x, nextPosition.y + (size.y / 2), nextPosition.z);
+
+                other.transform.localPosition = new Vector3(nextPosition.x, nextPosition.y, nextPosition.z);
                 other.transform.localRotation = new Quaternion(0, 0, 0, 0);
 
-                nextPosition = new Vector3(nextPosition.x, nextPosition.y + size.y, nextPosition.z); ;
+                nextPosition = new Vector3(nextPosition.x, nextPosition.y + (size.y / 2), nextPosition.z);
+                Debug.Log(nextPosition.ToString());
+
             }
 
         }
