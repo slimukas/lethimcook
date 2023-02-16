@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum CustomerState { Waiting, Ordering, Eating, Entering, Leaving }
 
@@ -17,6 +18,8 @@ public class CustomerStateManager : MonoBehaviour
     public Vector3 startPosition;
     public bool hadOrdered;
     public GameObject mealHolder;
+
+    public Image timer;
 
 
 
