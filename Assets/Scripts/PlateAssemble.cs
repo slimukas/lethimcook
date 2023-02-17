@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlateAssemble : MonoBehaviour
 {
-    [SerializeField] private Vector3 pivot;
+    [SerializeField] private Vector3 offset;
     private Vector3 firstPosition;
     private Vector3 nextPosition;
 
@@ -15,9 +15,7 @@ public class PlateAssemble : MonoBehaviour
     void Start()
     {
         onPlateObj = new List<GameObject>();
-        firstPosition = pivot;
-        nextPosition = firstPosition;
-
+        firstPosition = offset;
     }
 
 
@@ -36,7 +34,7 @@ public class PlateAssemble : MonoBehaviour
             if (onPlateObj.Count <= 1)
             {
                 size = other.GetComponent<BoxCollider>().size;
-                other.transform.localPosition = new Vector3(firstPosition.x, firstPosition.y + 0.1f, firstPosition.z);
+                other.transform.localPosition = firstPosition;
                 other.transform.localRotation = new Quaternion(0, 0, 0, 0);
 
                 nextPosition = new Vector3(firstPosition.x, firstPosition.y + (size.y / 2) + 0.1f, firstPosition.z);
