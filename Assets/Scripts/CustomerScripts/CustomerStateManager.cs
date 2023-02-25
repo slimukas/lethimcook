@@ -7,7 +7,7 @@ public class CustomerStateManager : MonoBehaviour
 {
     // Serialized Fields
 
-    [SerializeField] private Menu menu; //? Kodel jis SerializedField?
+    [SerializeField] private Menu menu;
 
     // Private fields
 
@@ -65,14 +65,18 @@ public class CustomerStateManager : MonoBehaviour
     }
 
     // MonoBehaviour
-    private void Awake()
+    private void Start()
     {
         startPosition = this.transform.localPosition;
+        SetState(CustomerState.Entering);
+
+    }
+    private void Awake()
+    {
         hadOrdered = false;
         CustomerOrder = GetComponentInChildren<CustomerOrder>();
         OrderTicket = GetComponentInChildren<OrderTicket>();
 
-        SetState(CustomerState.Entering);
     }
 
     private void Update()
