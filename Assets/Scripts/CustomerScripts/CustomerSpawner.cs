@@ -14,21 +14,29 @@ public class CustomerSpawner : MonoBehaviour
     private void Start()
     {
         canSpawn = false;
-        Game.Current.room.OnDoorOpened += CanSpawn;
+        Game.Current.room.OnDoorOpened += StartSpawn;
+        Game.Current.room.OnDoorClose += StopSpawn;
 
     }
-    private void CanSpawn()
+    private void StartSpawn()
     {
+        canSpawn = true;
         float delay = Random.Range(minDelay, maxDelay);
         Invoke("Spawn", delay);
     }
+
+    private void StopSpawn()
+    {
+        canSpawn = false;
+    }
+
     private void Update()
     {
 
     }
     private void Spawn()
     {
-        if (transform.childCount < 2)
+        if (transform.childCount < 2 && canSpawn)
         {
             GameObject instance = Instantiate(customerPrefab, spawnPoint.transform.position, Quaternion.identity);
             instance.transform.parent = transform;
