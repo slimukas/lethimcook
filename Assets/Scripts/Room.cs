@@ -28,7 +28,7 @@ public class Room : MonoBehaviour
         StartCoroutine(startTimer());
     }
 
-    IEnumerator startTimer()
+    private IEnumerator startTimer()
     {
         while (timer > 0)
         {

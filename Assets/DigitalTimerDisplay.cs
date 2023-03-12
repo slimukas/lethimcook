@@ -5,7 +5,7 @@ using TMPro;
 
 public class DigitalTimerDisplay : MonoBehaviour
 {
-    [SerializeField] private TMP_Text timerText;
+    private TMP_Text timerText;
     public CustomerOrder CustomerOrder { get; private set; }
 
     private void Awake()
@@ -15,9 +15,12 @@ public class DigitalTimerDisplay : MonoBehaviour
     private void Start()
     {
         Game.Current.room.OnDoorOpened += StartTimer;
+        var minutes = Mathf.FloorToInt(Game.Current.room.timer / 60);
+        var seconds = Mathf.FloorToInt(Game.Current.room.timer - minutes * 60);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    private void DisplayTimer()
+    private IEnumerator DisplayTimer()
     {
         while (Game.Current.room.timer > 0)
         {
@@ -25,7 +28,8 @@ public class DigitalTimerDisplay : MonoBehaviour
             var seconds = Mathf.FloorToInt(Game.Current.room.timer - minutes * 60);
             timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-            return;
+            yield return null;
+
         }
 
 
@@ -34,6 +38,6 @@ public class DigitalTimerDisplay : MonoBehaviour
     private void StartTimer()
     {
         Debug.Log("Timer Start");
-        DisplayTimer();
+        StartCoroutine(DisplayTimer());
     }
 }
