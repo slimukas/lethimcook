@@ -15,7 +15,7 @@ public class CustomerEnteringState : CustomerBaseState
 
         timeToReachTarget = Random.Range(2f, 5f);
         startPosition = customer.startPosition;
-        target = new Vector3(0, customer.transform.position.y, 0);
+        target = new Vector3(0, 0, 0);
     }
 
     public override void UpdateState(CustomerStateManager customer)

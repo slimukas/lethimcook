@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5625607098662261711}
   - component: {fileID: 6841832284909817893}
   - component: {fileID: 6171669129023761147}
-  - component: {fileID: 5136368534266423946}
   m_Layer: 0
   m_Name: Kitchen_Wall
   m_TagString: Untagged
@@ -30,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6591212384998089971}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
@@ -97,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5267163, y: 2.086256, z: 17.29079}
-  m_Center: {x: -0.19367391, y: 0.9384363, z: -2.7037857}
+  m_Size: {x: 0.52671623, y: 7.5497904, z: 2.2199361}
+  m_Center: {x: -0.19367388, y: -0.3250432, z: 6.54849}
 --- !u!65 &5625607098662261711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -110,8 +109,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5267163, y: 2.3950362, z: 22.60397}
-  m_Center: {x: -0.19367391, y: 5.923118, z: -0.0064730644}
+  m_Size: {x: 0.52671623, y: 11.288667, z: 7.375762}
+  m_Center: {x: -0.19367388, y: 1.4763129, z: -5.7747393}
 --- !u!65 &6841832284909817893
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123,8 +122,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5267163, y: 4.8982015, z: 2.8418941}
-  m_Center: {x: -0.19367391, y: 2.3928902, z: 9.8395405}
+  m_Size: {x: 0.52671623, y: 9.038836, z: 2.740895}
+  m_Center: {x: -0.19367388, y: 0.32257766, z: 11.505876}
 --- !u!65 &6171669129023761147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -136,18 +135,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5267163, y: 2.8194141, z: 2.2093298}
-  m_Center: {x: -0.19367391, y: 3.2733426, z: 4.846142}
---- !u!65 &5136368534266423946
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6591212384998089971}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5267163, y: 2.9164004, z: 7.5554285}
-  m_Center: {x: -0.19367391, y: 3.4091282, z: -7.485604}
+  m_Size: {x: 0.5267164, y: 2.5164413, z: 20.152065}
+  m_Center: {x: -0.19367388, y: 3.4248292, z: 0.7223418}
