@@ -37,12 +37,12 @@ public class PickupController : MonoBehaviour
         }
         else if (heldObj != null)
         {
+            //heldObj.transform.localPosition = Vector3.zero;
             MoveObject();
             pickupDistance = heldObj.transform.position - holdArea.transform.position;
             if (pickupDistance.magnitude >= 1.2)
             {
                 DropObject();
-                //Debug.Log(distance.magnitude);
             }
         }
 

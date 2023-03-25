@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1888813148041786575}
   - component: {fileID: 7907136048659882592}
   - component: {fileID: 74470855423225931}
+  - component: {fileID: 3545911524435913709}
   m_Layer: 0
   m_Name: Kitchen_Counter
   m_TagString: Untagged
@@ -165,3 +166,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0218146, y: 0.06390259, z: 3.7057765}
   m_Center: {x: -0.07511727, y: -0.029741898, z: 1.3708797}
+--- !u!65 &3545911524435913709
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971173262104937708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.4006143, y: 2, z: 1.86}
+  m_Center: {x: 2.3964567, y: -0.19197726, z: -3.36}

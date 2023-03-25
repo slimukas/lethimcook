@@ -9,7 +9,8 @@ public class IngredientSpawner : MonoBehaviour
 
     public void Spawn()
     {
-        Debug.Log("Spawned");
-        Instantiate(ingredient, spawnPosition);
+        var newObj = Instantiate(ingredient, spawnPosition);
+        newObj.transform.localPosition = Vector3.zero;
+        newObj.transform.localScale = Vector3.one;
     }
 }
