@@ -51,7 +51,7 @@ public class CustomerEatState : CustomerBaseState
                 }
             }
         }
-
+        Game.Current.room.AddScore(rating);
     }
 
     private void EatFood(CustomerOrder customerOrder)
