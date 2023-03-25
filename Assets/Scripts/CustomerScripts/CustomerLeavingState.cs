@@ -13,13 +13,14 @@ public class CustomerLeavingState : CustomerBaseState
     {
         Debug.Log("Leaving...");
         startPosition = customer.startPosition;
+        customer.timer.gameObject.SetActive(false);
 
     }
 
     public override void UpdateState(CustomerStateManager customer)
     {
         t += Time.deltaTime / timeToReachTarget;
-        customer.transform.localPosition = Vector3.Lerp(new Vector3(0, customer.transform.position.y, 0), startPosition, t);
+        customer.transform.localPosition = Vector3.Lerp(new Vector3(0, 0, 0), startPosition, t);
 
         if (customer.transform.localPosition == startPosition)
         {

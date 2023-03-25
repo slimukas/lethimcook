@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorBehaviour : MonoBehaviour, IUsable
 {
-    [SerializeField] Room room;
+    [SerializeField] private Room room;
 
     public void Interact()
     {
