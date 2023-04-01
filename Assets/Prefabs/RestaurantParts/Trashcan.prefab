@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3158404337937674467}
   - component: {fileID: 2204193436188189228}
   - component: {fileID: 3078398985467516518}
+  - component: {fileID: 3683632355212012316}
   m_Layer: 0
   m_Name: Trashcan
   m_TagString: Untagged
@@ -35,6 +36,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 5041320968044240509}
+  - {fileID: 7857617484695992884}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -152,6 +154,89 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7569599, y: 1.2430494, z: 1.0713654}
   m_Center: {x: -0.017518997, y: -0.18636155, z: 0.02803874}
+--- !u!111 &3683632355212012316
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8604870792074334434}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: a3f9c7c2912b2b64099d01bd42500cc8, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: a3f9c7c2912b2b64099d01bd42500cc8, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1001 &1265129609527489477
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3289714445347522764}
+    m_Modifications:
+    - target: {fileID: 6626665756246125232, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+      propertyPath: m_Name
+      value: Effect_SmokePuff_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972711791671183857, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972711791671183857, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0022053716
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972711791671183857, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7800001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972711791671183857, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.003952981
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972711791671183857, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972711791671183857, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972711791671183857, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972711791671183857, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972711791671183857, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972711791671183857, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972711791671183857, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+--- !u!4 &7857617484695992884 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8972711791671183857, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+  m_PrefabInstance: {fileID: 1265129609527489477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &490853034261683046 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1675753124727482531, guid: b17d9c51f9a22994089767006339eac3, type: 3}
+  m_PrefabInstance: {fileID: 1265129609527489477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4281526233855145680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -159,6 +244,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3289714445347522764}
     m_Modifications:
+    - target: {fileID: -2108696611543359987, guid: eefa5469db4b69348b2dc1649fbac6d9, type: 3}
+      propertyPath: trashVFX
+      value: 
+      objectReference: {fileID: 490853034261683046}
+    - target: {fileID: -2108696611543359987, guid: eefa5469db4b69348b2dc1649fbac6d9, type: 3}
+      propertyPath: trashAnimation
+      value: 
+      objectReference: {fileID: 3683632355212012316}
     - target: {fileID: 4093671350138268524, guid: eefa5469db4b69348b2dc1649fbac6d9, type: 3}
       propertyPath: m_Name
       value: TrashCan

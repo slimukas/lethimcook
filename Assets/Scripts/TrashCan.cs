@@ -5,6 +5,7 @@ using UnityEngine;
 public class TrashCan : MonoBehaviour
 {
     [SerializeField] private ParticleSystem trashVFX;
+    [SerializeField] private Animation trashAnimation;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,6 +15,7 @@ public class TrashCan : MonoBehaviour
             {
                 GameObject.Destroy(other.gameObject);
                 trashVFX.Play();
+                trashAnimation.Play();
             }
         }
     }

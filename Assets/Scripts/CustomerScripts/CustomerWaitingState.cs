@@ -8,6 +8,7 @@ public class CustomerWaitingState : CustomerBaseState
     float startTime = 30;
     float currenTime = 0;
     bool hadOrdered;
+    bool isLeaving;
 
     public override void EnterState(CustomerStateManager customer)
     {
@@ -17,6 +18,7 @@ public class CustomerWaitingState : CustomerBaseState
         hadOrdered = customer.hadOrdered;
 
         customer.timer.fillAmount = 1;
+        isLeaving = false;
     }
 
     public override void UpdateState(CustomerStateManager customer)
@@ -26,9 +28,12 @@ public class CustomerWaitingState : CustomerBaseState
         customer.timer.color = Color.Lerp(Color.red, Color.green, currenTime / startTime);
         customer.timer.fillAmount = currenTime / startTime;
 
-        if (currenTime <= 0)
+        if (currenTime <= 0 && isLeaving == false)
         {
-            GameObject.Destroy(customer.gameObject);
+            isLeaving = true;
+            customer.leaveVFX.Play();
+            customer.model.SetActive(false);
+            GameObject.Destroy(customer.gameObject, 0.5f);
         }
     }
 
@@ -45,5 +50,4 @@ public class CustomerWaitingState : CustomerBaseState
             hadOrdered = true;
         }
     }
-
 }

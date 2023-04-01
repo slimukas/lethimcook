@@ -7,6 +7,7 @@ public class PlateStates : MonoBehaviour
     [SerializeField] private Material clean;
     [SerializeField] private Material dirty;
     [SerializeField] private GameObject holder;
+    [SerializeField] private ParticleSystem cleanVFX;
 
     public bool isClean;
 
@@ -31,6 +32,7 @@ public class PlateStates : MonoBehaviour
     {
         if (isClean == false)
         {
+            cleanVFX.Play();
             this.gameObject.GetComponent<Renderer>().material = clean;
             gameObject.name = "CleanPlate";
             isClean = true;

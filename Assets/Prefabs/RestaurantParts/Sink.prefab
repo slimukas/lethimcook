@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 2752926752459568030}
   - component: {fileID: 2604486400529924009}
   - component: {fileID: 7669592066349470678}
+  - component: {fileID: 3511976999579663220}
   m_Layer: 0
   m_Name: Sink
   m_TagString: Untagged
@@ -40,6 +41,7 @@ Transform:
   - {fileID: 6645053533026436}
   - {fileID: 511587078821664760}
   - {fileID: 1020537281440764389}
+  - {fileID: 8309536343955979754}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -196,6 +198,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.25334182, y: 0.11472598, z: 0.115216404}
   m_Center: {x: -0.46586028, y: 0.8223159, z: 0.13999997}
+--- !u!111 &3511976999579663220
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112367168251092631}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e46b859628ced4640a158a51e6f7cb74, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e46b859628ced4640a158a51e6f7cb74, type: 2}
+  - {fileID: 7400000, guid: 99bb5e160dbe20840aa38bafeb34d964, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1800023447652224981
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +377,85 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &214730698896510745
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6234374649058385363}
+    m_Modifications:
+    - target: {fileID: 5568146829722101016, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6041607555840953872, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6074610870605668534, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257852395781755314, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: m_Name
+      value: Effect_SinkWater_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190788960615183091, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190788960615183091, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190788960615183091, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190788960615183091, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190788960615183091, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190788960615183091, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190788960615183091, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190788960615183091, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190788960615183091, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190788960615183091, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190788960615183091, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+--- !u!4 &8309536343955979754 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8190788960615183091, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+  m_PrefabInstance: {fileID: 214730698896510745}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1771434195966844088 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1904888960976180129, guid: aaec0193a3f95944a86400ef392d0c25, type: 3}
+  m_PrefabInstance: {fileID: 214730698896510745}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5656430945163253072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -365,6 +463,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6234374649058385363}
     m_Modifications:
+    - target: {fileID: 1136194127, guid: 8dfdb22811c034846a8cf4204982d1fa, type: 3}
+      propertyPath: cleanVFX
+      value: 
+      objectReference: {fileID: 1771434195966844088}
+    - target: {fileID: 1136194127, guid: 8dfdb22811c034846a8cf4204982d1fa, type: 3}
+      propertyPath: waterVFX
+      value: 
+      objectReference: {fileID: 1771434195966844088}
+    - target: {fileID: 1136194127, guid: 8dfdb22811c034846a8cf4204982d1fa, type: 3}
+      propertyPath: sinkAniamtion
+      value: 
+      objectReference: {fileID: 3511976999579663220}
+    - target: {fileID: 1136194127, guid: 8dfdb22811c034846a8cf4204982d1fa, type: 3}
+      propertyPath: valveAniamtion
+      value: 
+      objectReference: {fileID: 3511976999579663220}
     - target: {fileID: 433738679768827764, guid: 8dfdb22811c034846a8cf4204982d1fa, type: 3}
       propertyPath: m_Name
       value: Sink

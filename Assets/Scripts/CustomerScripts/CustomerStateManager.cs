@@ -19,14 +19,14 @@ public class CustomerStateManager : MonoBehaviour
     public bool hadOrdered;
     public GameObject mealHolder;
 
-    public Image timer;
-
-
-
-    // Properties
-
     public CustomerOrder CustomerOrder { get; private set; }
     public OrderTicket OrderTicket { get; private set; }
+
+    public Image timer;
+    public ParticleSystem leaveVFX;
+    public GameObject model;
+
+    // Properties
 
 
     public Dish GetMenu()
