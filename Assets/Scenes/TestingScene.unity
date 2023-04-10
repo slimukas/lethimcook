@@ -1406,6 +1406,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1858288519}
     m_Modifications:
+    - target: {fileID: 1484460235852322751, guid: 0d99da1116e384f4db7639645be58862, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5265547452555576542, guid: 0d99da1116e384f4db7639645be58862, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -1413,6 +1417,10 @@ PrefabInstance:
     - target: {fileID: 6354017549620991404, guid: 0d99da1116e384f4db7639645be58862, type: 3}
       propertyPath: m_Name
       value: Effect_Couds_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537820057648145576, guid: 0d99da1116e384f4db7639645be58862, type: 3}
+      propertyPath: playOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9177735687184545517, guid: 0d99da1116e384f4db7639645be58862, type: 3}
       propertyPath: m_RootOrder
@@ -9294,8 +9302,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 633776275}
-  minutes: 1
-  seconds: 2
+  minutes: 5
+  seconds: 0
   score: 0
 --- !u!1 &757168851
 GameObject:
@@ -32206,6 +32214,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3580235894374833093, guid: dacc3e170a458584da6f5a7c935ac134, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580235894374833093, guid: dacc3e170a458584da6f5a7c935ac134, type: 3}
       propertyPath: simulationSpeed
       value: 0.5
       objectReference: {fileID: 0}
@@ -32264,6 +32276,10 @@ PrefabInstance:
     - target: {fileID: 3691417242082994881, guid: dacc3e170a458584da6f5a7c935ac134, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191092160373565650, guid: dacc3e170a458584da6f5a7c935ac134, type: 3}
+      propertyPath: playOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dacc3e170a458584da6f5a7c935ac134, type: 3}
@@ -34288,9 +34304,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3580235894374833093, guid: dacc3e170a458584da6f5a7c935ac134, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3691417242082994881, guid: dacc3e170a458584da6f5a7c935ac134, type: 3}
       propertyPath: m_Name
       value: Effect_Leaves_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191092160373565650, guid: dacc3e170a458584da6f5a7c935ac134, type: 3}
+      propertyPath: playOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dacc3e170a458584da6f5a7c935ac134, type: 3}
@@ -35343,7 +35367,7 @@ PrefabInstance:
       objectReference: {fileID: 1906519174}
     - target: {fileID: 3406674657843130645, guid: cefc17f76b099294899ed35733e29560, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 119
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cefc17f76b099294899ed35733e29560, type: 3}
@@ -35671,6 +35695,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1858288519}
     m_Modifications:
+    - target: {fileID: 4937354615623318886, guid: 947c22ab27f3809488df9733efda0038, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4937354615623318887, guid: 947c22ab27f3809488df9733efda0038, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -36107,6 +36135,10 @@ PrefabInstance:
     - target: {fileID: 6749914207327560025, guid: 4b1dd80731730704b96aa95403a76dd0, type: 3}
       propertyPath: m_Name
       value: Effect_Crowd_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6749914207327560026, guid: 4b1dd80731730704b96aa95403a76dd0, type: 3}
+      propertyPath: playOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b1dd80731730704b96aa95403a76dd0, type: 3}
