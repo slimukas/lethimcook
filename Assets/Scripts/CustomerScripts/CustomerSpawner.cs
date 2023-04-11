@@ -8,6 +8,7 @@ public class CustomerSpawner : MonoBehaviour
     [SerializeField] private bool canSpawn;
     [SerializeField] private float minDelay = 1f;
     [SerializeField] private float maxDelay = 5f;
+    [SerializeField] private int ticketNumber;
     public Transform spawnPoint;
 
 
@@ -41,6 +42,7 @@ public class CustomerSpawner : MonoBehaviour
             GameObject instance = Instantiate(customerPrefab, spawnPoint.transform.position, Quaternion.identity);
             instance.transform.parent = transform;
             instance.gameObject.SetActive(true);
+            instance.GetComponent<CustomerOrder>().orderTicketNumber = ticketNumber;
         }
         float delay = Random.Range(minDelay, maxDelay);
         Invoke("Spawn", delay);

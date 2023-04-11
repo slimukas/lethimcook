@@ -7,8 +7,12 @@ public class PickupController : MonoBehaviour
     [Header("Pickup Settings")]
     [SerializeField] Transform holdArea;
     [SerializeField] GameObject holdAreaObj;
+    [SerializeField] GameObject pickuopUiElement;
+
     private GameObject heldObj;
     private Rigidbody heldObjRB;
+    private bool rayHit;
+
 
     [Header("Physics Parameters")]
     [SerializeField] private float picupRange;
@@ -18,14 +22,25 @@ public class PickupController : MonoBehaviour
 
     private void Update()
     {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, picupRange)
+        && hit.collider.GetComponent<Rigidbody>() != null)
+        {
+            Debug.Log(hit.collider.name);
+            pickuopUiElement.SetActive(true);
+            rayHit = true;
+        }
+        else
+        {
+            pickuopUiElement.SetActive(false);
+            rayHit = false;
+        }
 
-        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.green);
         if (Input.GetMouseButtonDown(0))
         {
             if (heldObj == null)
             {
-                RaycastHit hit;
-                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, picupRange))
+                if (rayHit)
                 {
                     PickupObject(hit.transform.gameObject);
                 }

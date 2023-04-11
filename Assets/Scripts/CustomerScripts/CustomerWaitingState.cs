@@ -5,7 +5,7 @@ using UnityEngine;
 public class CustomerWaitingState : CustomerBaseState
 {
 
-    float startTime = 30;
+    float waitTime;
     float currenTime = 0;
     bool hadOrdered;
     bool isLeaving;
@@ -13,8 +13,8 @@ public class CustomerWaitingState : CustomerBaseState
     public override void EnterState(CustomerStateManager customer)
     {
         Debug.Log("Waiting...");
-
-        currenTime = startTime;
+        waitTime = customer.waitTime;
+        currenTime = waitTime;
         hadOrdered = customer.hadOrdered;
 
         customer.timer.fillAmount = 1;
@@ -25,8 +25,8 @@ public class CustomerWaitingState : CustomerBaseState
     {
         currenTime -= 1 * Time.deltaTime;
 
-        customer.timer.color = Color.Lerp(Color.red, Color.green, currenTime / startTime);
-        customer.timer.fillAmount = currenTime / startTime;
+        customer.timer.color = Color.Lerp(Color.red, Color.green, currenTime / waitTime);
+        customer.timer.fillAmount = currenTime / waitTime;
 
         if (currenTime <= 0 && isLeaving == false)
         {

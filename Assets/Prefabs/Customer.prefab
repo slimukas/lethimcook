@@ -129,6 +129,7 @@ MonoBehaviour:
   startPosition: {x: 0, y: 0, z: 0}
   hadOrdered: 0
   mealHolder: {fileID: 299331601}
+  waitTime: 60
   timer: {fileID: 7165962410566550375}
   leaveVFX: {fileID: 6322838029149666220}
   model: {fileID: 5725291278525079994}

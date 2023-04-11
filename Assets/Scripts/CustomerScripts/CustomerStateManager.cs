@@ -18,6 +18,7 @@ public class CustomerStateManager : MonoBehaviour
     public Vector3 startPosition;
     public bool hadOrdered;
     public GameObject mealHolder;
+    public float waitTime;
 
     public CustomerOrder CustomerOrder { get; private set; }
     public OrderTicket OrderTicket { get; private set; }

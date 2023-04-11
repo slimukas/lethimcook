@@ -20,6 +20,11 @@ public class DishServe : MonoBehaviour
             other.GetComponent<PlateStates>().Dirty();
             customer.SetState(CustomerState.Eating);
         }
+        else if (other.gameObject.tag == "Drink")
+        {
+            Destroy(other.gameObject);
+            customer.SetState(CustomerState.Waiting);
+        }
     }
 
     void GetPlateIngr(GameObject plate)
