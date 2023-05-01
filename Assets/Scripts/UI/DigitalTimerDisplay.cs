@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 
@@ -7,6 +8,8 @@ public class DigitalTimerDisplay : MonoBehaviour
 {
     private TMP_Text timerText;
     public CustomerOrder CustomerOrder { get; private set; }
+
+    public event Action OnTimerEnd;
 
     private void Awake()
     {

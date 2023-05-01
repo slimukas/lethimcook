@@ -5794,7 +5794,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467017538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.241, y: 1.176, z: -0.096}
+  m_LocalPosition: {x: -2.267, y: 1.176, z: 0.039}
   m_LocalScale: {x: 1, y: 2.0991, z: 0.07314594}
   m_Children: []
   m_Father: {fileID: 633776275}
@@ -10022,7 +10022,7 @@ MonoBehaviour:
   door: {fileID: 633776275}
   minutes: 5
   seconds: 0
-  score: 0
+  neededScore: 100
 --- !u!1 &757168851
 GameObject:
   m_ObjectHideFlags: 0
@@ -38799,10 +38799,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 751416031}
     m_Modifications:
-    - target: {fileID: 5418143178832309787, guid: 7b0b224704f5093429c83688e12c53ca, type: 3}
-      propertyPath: m_RetainTransformParent
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8332689778573231690, guid: 7b0b224704f5093429c83688e12c53ca, type: 3}
       propertyPath: m_TagString
       value: Untagged

@@ -9,12 +9,14 @@ public class Room : MonoBehaviour
     [SerializeField] private Transform door;
     [SerializeField] private int minutes;
     [SerializeField] private int seconds;
-    [SerializeField] private int score;
 
     public event Action OnDoorOpened;
     public event Action OnDoorClose;
+    public float neededScore;
 
     public float timer { get; private set; }
+    public float score { get; private set; }
+
 
     private void Awake()
     {
