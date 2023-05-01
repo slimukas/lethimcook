@@ -34,6 +34,10 @@ public class DigitalTimerDisplay : MonoBehaviour
             yield return null;
 
         }
+        if (Game.Current.room.timer <= 0)
+        {
+            OnTimerEnd?.Invoke();
+        }
 
 
     }
