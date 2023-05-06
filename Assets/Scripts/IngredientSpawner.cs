@@ -7,6 +7,7 @@ public class IngredientSpawner : MonoBehaviour
     [SerializeField] private GameObject ingredient;
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private ParticleSystem spawnVFX;
+    [SerializeField] private Animation shakeAnimation;
 
     public void Spawn()
     {
@@ -14,6 +15,7 @@ public class IngredientSpawner : MonoBehaviour
         newObj.transform.localPosition = Vector3.zero;
         newObj.transform.localScale = Vector3.one;
         spawnVFX.Play();
+        shakeAnimation.Play();
 
     }
 }
