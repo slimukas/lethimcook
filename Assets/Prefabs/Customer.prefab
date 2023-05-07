@@ -44,7 +44,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.78, y: 0.1, z: 0.45}
-  m_Center: {x: 0, y: 0, z: 0.06}
+  m_Center: {x: 0, y: 0.2, z: 0.06}
 --- !u!114 &299331604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: []
   preparedOrder: []
+  orderTicketNumber: 0
 --- !u!114 &152451304319153094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +163,7 @@ MonoBehaviour:
   ingredient: {fileID: 152451304319153092}
   orderTicket: {fileID: 5922516742831097573, guid: 509bc06b5f8578d4e8303b66da3f0dfa, type: 3}
   ticketPosition: {fileID: 299331602}
+  ticketNumber: {fileID: 0}
 --- !u!1 &4876139607504869403
 GameObject:
   m_ObjectHideFlags: 0

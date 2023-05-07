@@ -52,7 +52,6 @@ public class PlateAssemble : MonoBehaviour
                 other.transform.localRotation = new Quaternion(0, 0, 0, 0);
 
                 nextPosition = new Vector3(nextPosition.x, nextPosition.y + (size.y / 2), nextPosition.z);
-                Debug.Log(nextPosition.ToString());
 
             }
 

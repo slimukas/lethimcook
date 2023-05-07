@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 2051804344962238535}
   - component: {fileID: 3999935381034463930}
   - component: {fileID: 5779531121342241738}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PattySpawner
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8773158866173695334
 Transform:
@@ -113,9 +113,9 @@ GameObject:
   - component: {fileID: -5188669895916751323}
   - component: {fileID: 7640975801369826723}
   - component: {fileID: -1673225317267334426}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PattySpawner
-  m_TagString: Ingredient
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -127,7 +127,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4671650123195549710}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
@@ -196,7 +196,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.993169, y: 0.34148628, z: 1.9863613}
+  m_Size: {x: 1.993169, y: 1.99, z: 1.9863613}
   m_Center: {x: 0, y: -0.0011272803, z: -0.0068193376}
 --- !u!114 &7640975801369826723
 MonoBehaviour:
@@ -313,7 +313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4158640132990106844}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -328,7 +328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5106722682615101071}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.77, y: -5.19, z: -0.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1063332161769527404}

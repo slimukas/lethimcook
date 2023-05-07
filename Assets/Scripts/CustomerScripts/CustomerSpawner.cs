@@ -16,6 +16,7 @@ public class CustomerSpawner : MonoBehaviour
     {
         canSpawn = false;
         Game.Current.room.OnDoorOpened += StartSpawn;
+        Game.Current.room.OnDoorOpened += InstaSpawn;
         Game.Current.room.OnDoorClose += StopSpawn;
 
     }
@@ -46,5 +47,14 @@ public class CustomerSpawner : MonoBehaviour
         }
         float delay = Random.Range(minDelay, maxDelay);
         Invoke("Spawn", delay);
+    }
+
+    private void InstaSpawn()
+    {
+        GameObject instance = Instantiate(customerPrefab, spawnPoint.transform.position, Quaternion.identity);
+        instance.transform.parent = transform;
+        instance.gameObject.SetActive(true);
+        instance.GetComponent<CustomerOrder>().orderTicketNumber = ticketNumber;
+
     }
 }

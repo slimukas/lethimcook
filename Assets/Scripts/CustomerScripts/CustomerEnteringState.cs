@@ -13,7 +13,7 @@ public class CustomerEnteringState : CustomerBaseState
     {
         Debug.Log("Entering...");
 
-        timeToReachTarget = Random.Range(2f, 5f);
+        timeToReachTarget = 5f;
         startPosition = customer.startPosition;
         target = new Vector3(0, 0, 0);
     }

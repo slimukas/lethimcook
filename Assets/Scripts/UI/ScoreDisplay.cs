@@ -38,7 +38,7 @@ public class ScoreDisplay : MonoBehaviour
     {
         readyScreen.SetActive(true);
         vrButton.SetActive(true);
-        if (Game.Current.room.neededScore >= Game.Current.room.score)
+        if (Game.Current.room.neededScore <= Game.Current.room.score)
         {
             scoreText.color = Color.green;
             roundEndText.text = "Ready up for next level";
