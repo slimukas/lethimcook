@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
         rb.AddForce(moveDirection.normalized * movementSpeed, ForceMode.Force);
-        animator.SetFloat("Velocity", rb.velocity.magnitude, 0.2f, Time.deltaTime);
+        animator.SetFloat("Velocity", rb.velocity.magnitude, 0.1f, Time.deltaTime);
 
     }
 }
