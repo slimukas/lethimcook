@@ -12,11 +12,14 @@ public class PickupController : MonoBehaviour
     private GameObject heldObj;
     private Rigidbody heldObjRB;
     private bool rayHit;
+    private float currentWeight;
 
 
     [Header("Physics Parameters")]
     [SerializeField] private float picupRange;
     [SerializeField] private float pickupForce;
+
+    [SerializeField] private Animator animator;
 
     private Vector3 pickupDistance;
 
@@ -48,6 +51,8 @@ public class PickupController : MonoBehaviour
             else
             {
                 DropObject();
+
+
             }
         }
         else if (heldObj != null)
@@ -78,6 +83,7 @@ public class PickupController : MonoBehaviour
     {
         if (pickObj.GetComponent<Rigidbody>())
         {
+            animator.SetLayerWeight(1, 1f);
             heldObjRB = pickObj.GetComponent<Rigidbody>();
             heldObjRB.useGravity = true;
             heldObjRB.constraints = RigidbodyConstraints.FreezeRotation;
@@ -92,6 +98,7 @@ public class PickupController : MonoBehaviour
 
     void DropObject()
     {
+        animator.SetLayerWeight(1, 0f);
         heldObjRB.useGravity = true;
         heldObjRB.drag = 1;
         heldObjRB.constraints = RigidbodyConstraints.None;

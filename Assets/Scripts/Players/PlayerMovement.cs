@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float movementSpeed = 12f;
+    [SerializeField] private float movementSpeed = 12f;
+    [SerializeField] private Animator animator;
 
     private float horizontalInput;
     private float verticalInput;
@@ -29,9 +30,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
         rb.AddForce(moveDirection.normalized * movementSpeed, ForceMode.Force);
+        animator.SetFloat("Velocity", rb.velocity.magnitude, 0.2f, Time.deltaTime);
 
     }
 }
