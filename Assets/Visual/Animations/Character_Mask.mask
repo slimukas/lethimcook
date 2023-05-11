@@ -12,7 +12,7 @@ AvatarMask:
   - m_Path: 
     m_Weight: 1
   - m_Path: 1
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Armature
     m_Weight: 0
   - m_Path: Armature/Bone
@@ -39,7 +39,19 @@ AvatarMask:
     m_Weight: 1
   - m_Path: Armature/Bone/Bone.001/R_Shoulder/R_Forearm/R_Elbo
     m_Weight: 1
-  - m_Path: Armature/Bone/Bone.001/R_Shoulder/R_Forearm/R_Elbo/R_Elbo_end
+  - m_Path: Armature/Bone/Bone.001/R_Shoulder/R_Forearm/R_Elbo/R_Hand
+    m_Weight: 1
+  - m_Path: Armature/Bone/Bone.001/R_Shoulder/R_Forearm/R_Elbo/R_Hand/R_Finger.01
+    m_Weight: 1
+  - m_Path: Armature/Bone/Bone.001/R_Shoulder/R_Forearm/R_Elbo/R_Hand/R_Finger.01/R_Finger.01_end
+    m_Weight: 1
+  - m_Path: Armature/Bone/Bone.001/R_Shoulder/R_Forearm/R_Elbo/R_Hand/R_Finger.02
+    m_Weight: 1
+  - m_Path: Armature/Bone/Bone.001/R_Shoulder/R_Forearm/R_Elbo/R_Hand/R_Finger.02/R_Finger.02_end
+    m_Weight: 1
+  - m_Path: Armature/Bone/Bone.001/R_Shoulder/R_Forearm/R_Elbo/R_Hand/R_Thumb
+    m_Weight: 1
+  - m_Path: Armature/Bone/Bone.001/R_Shoulder/R_Forearm/R_Elbo/R_Hand/R_Thumb/R_Thumb_end
     m_Weight: 1
   - m_Path: Armature/Bone/L_Hip
     m_Weight: 0
@@ -88,20 +100,8 @@ AvatarMask:
   - m_Path: Armature/L_Thigh.001/L_Thigh.001_end
     m_Weight: 0
   - m_Path: Armature/R_Elbo.001
-    m_Weight: 1
-  - m_Path: Armature/R_Elbo.001/R_Hand
     m_Weight: 0
-  - m_Path: Armature/R_Elbo.001/R_Hand/R_Finger.01
-    m_Weight: 0
-  - m_Path: Armature/R_Elbo.001/R_Hand/R_Finger.01/R_Finger.01_end
-    m_Weight: 0
-  - m_Path: Armature/R_Elbo.001/R_Hand/R_Finger.02
-    m_Weight: 0
-  - m_Path: Armature/R_Elbo.001/R_Hand/R_Finger.02/R_Finger.02_end
-    m_Weight: 0
-  - m_Path: Armature/R_Elbo.001/R_Hand/R_Thumb
-    m_Weight: 0
-  - m_Path: Armature/R_Elbo.001/R_Hand/R_Thumb/R_Thumb_end
+  - m_Path: Armature/R_Elbo.001/R_Elbo.001_end
     m_Weight: 0
   - m_Path: Armature/R_Forearm.001
     m_Weight: 0

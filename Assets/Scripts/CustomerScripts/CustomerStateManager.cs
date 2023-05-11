@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public enum CustomerState { Waiting, Ordering, Eating, Entering, Leaving }
 
-public class CustomerStateManager : MonoBehaviour
+public class CustomerStateManager : MonoBehaviour, IUsable
 {
     // Serialized Fields
 
@@ -22,11 +22,11 @@ public class CustomerStateManager : MonoBehaviour
 
     public CustomerOrder CustomerOrder { get; private set; }
     public OrderTicket OrderTicket { get; private set; }
+    public bool canInteract { get; set; }
 
     public Image timer;
     public ParticleSystem leaveVFX;
     public GameObject model;
-
     // Properties
 
 
@@ -88,6 +88,21 @@ public class CustomerStateManager : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         currentState.OnTriggerStay(this, other);
+    }
+
+    public void Interact()
+    {
+
+        if (canInteract)
+        {
+            if (hadOrdered == false)
+            {
+
+                hadOrdered = true;
+                SetState(CustomerState.Ordering);
+            }
+        }
+
     }
 
 }

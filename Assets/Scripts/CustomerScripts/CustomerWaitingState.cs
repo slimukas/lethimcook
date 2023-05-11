@@ -9,6 +9,9 @@ public class CustomerWaitingState : CustomerBaseState
     float currenTime = 0;
     bool hadOrdered;
     bool isLeaving;
+    CustomerStateManager customerStateManager;
+
+    public GameObject gameObject => throw new System.NotImplementedException();
 
     public override void EnterState(CustomerStateManager customer)
     {
@@ -16,9 +19,11 @@ public class CustomerWaitingState : CustomerBaseState
         waitTime = customer.waitTime;
         currenTime = waitTime;
         hadOrdered = customer.hadOrdered;
-
+        customerStateManager = customer;
         customer.timer.fillAmount = 1;
         isLeaving = false;
+
+        customer.canInteract = true;
     }
 
     public override void UpdateState(CustomerStateManager customer)
@@ -35,6 +40,10 @@ public class CustomerWaitingState : CustomerBaseState
             customer.model.SetActive(false);
             GameObject.Destroy(customer.gameObject, 0.5f);
         }
+        if (hadOrdered)
+        {
+            customer.canInteract = false;
+        }
     }
 
     public override void OnCollisionEnter(CustomerStateManager customer)
@@ -44,10 +53,12 @@ public class CustomerWaitingState : CustomerBaseState
 
     public override void OnTriggerStay(CustomerStateManager customer, Collider collider)
     {
-        if (collider.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && hadOrdered == false)
-        {
-            customer.SetState(CustomerState.Ordering);
-            hadOrdered = true;
-        }
+        // if (collider.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && hadOrdered == false)
+        // {
+        //     customer.SetState(CustomerState.Ordering);
+        //     hadOrdered = true;
+        // }
     }
+
+
 }

@@ -5,24 +5,34 @@ using UnityEngine;
 public class InteractBehaviour : MonoBehaviour
 {
     [SerializeField] private float interactRange;
+    [SerializeField] private GameObject interactIcon;
+    [SerializeField] private Transform Camera;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Camera.transform.TransformDirection(Vector3.forward), out hit, interactRange))
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, interactRange))
+            var objectToInteractWith = hit.collider.gameObject;
+            if (hit.collider.gameObject.TryGetComponent(out IUsable interactableObject) && interactableObject.canInteract)
             {
-                InteractWithObject(hit.collider.gameObject);
+                interactIcon.SetActive(true);
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    interactableObject.Interact();
+                }
+            }
+            else
+            {
+                interactIcon.SetActive(false);
+
             }
         }
-    }
-    void InteractWithObject(GameObject objectToInteractWith)
-    {
-        if (objectToInteractWith.TryGetComponent(out IUsable interactableObject))
+        else
         {
-
-            interactableObject.Interact();
+            interactIcon.SetActive(false);
         }
     }
+
 }

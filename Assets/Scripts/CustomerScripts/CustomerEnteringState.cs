@@ -13,9 +13,10 @@ public class CustomerEnteringState : CustomerBaseState
     {
         Debug.Log("Entering...");
 
-        timeToReachTarget = 5f;
+        timeToReachTarget = Random.Range(4.5f, 6f);
         startPosition = customer.startPosition;
         target = new Vector3(0, 0, 0);
+        customer.canInteract = false;
     }
 
     public override void UpdateState(CustomerStateManager customer)

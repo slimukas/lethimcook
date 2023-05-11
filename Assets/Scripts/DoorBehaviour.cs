@@ -5,10 +5,19 @@ using UnityEngine;
 public class DoorBehaviour : MonoBehaviour, IUsable
 {
     [SerializeField] private Room room;
+    public bool canInteract { get; set; }
 
+    private void Awake()
+    {
+        canInteract = true;
+    }
     public void Interact()
     {
-        room.OpenDoor();
+        if (canInteract)
+        {
+            room.OpenDoor();
+        }
+
     }
 
 }

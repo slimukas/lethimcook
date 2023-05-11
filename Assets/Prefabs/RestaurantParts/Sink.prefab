@@ -560,6 +560,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6234374649058385363}
     m_Modifications:
+    - target: {fileID: 1136194126, guid: 8dfdb22811c034846a8cf4204982d1fa, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136194126, guid: 8dfdb22811c034846a8cf4204982d1fa, type: 3}
+      propertyPath: m_Size.y
+      value: 1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136194126, guid: 8dfdb22811c034846a8cf4204982d1fa, type: 3}
+      propertyPath: m_Size.z
+      value: 0.62
+      objectReference: {fileID: 0}
     - target: {fileID: 1136194127, guid: 8dfdb22811c034846a8cf4204982d1fa, type: 3}
       propertyPath: cleanVFX
       value: 
@@ -628,7 +640,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4924385385864634634, guid: 8dfdb22811c034846a8cf4204982d1fa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4924385385864634634, guid: 8dfdb22811c034846a8cf4204982d1fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8dfdb22811c034846a8cf4204982d1fa, type: 3}
 --- !u!4 &1020537281440764389 stripped
 Transform:

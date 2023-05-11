@@ -21,6 +21,7 @@ public class PlateAssemble : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        var boxCollider = other.GetComponent<BoxCollider>();
         if (other.gameObject.tag == "Ingredient" && !onPlateObj.Contains(other.gameObject))
         {
             Vector3 size;
@@ -33,7 +34,7 @@ public class PlateAssemble : MonoBehaviour
 
             if (onPlateObj.Count <= 1)
             {
-                size = other.GetComponent<BoxCollider>().size;
+                size = boxCollider.size;
                 other.transform.localPosition = firstPosition;
                 other.transform.localRotation = new Quaternion(0, 0, 0, 0);
 
@@ -44,7 +45,7 @@ public class PlateAssemble : MonoBehaviour
 
             else
             {
-                size = other.GetComponent<BoxCollider>().size;
+                size = boxCollider.size;
 
 
 
@@ -54,7 +55,7 @@ public class PlateAssemble : MonoBehaviour
                 nextPosition = new Vector3(nextPosition.x, nextPosition.y + (size.y / 2), nextPosition.z);
 
             }
-
+            boxCollider.isTrigger = true;
         }
 
 

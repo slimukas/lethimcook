@@ -13,7 +13,6 @@ public class CustomerEatState : CustomerBaseState
         Debug.Log("Eating...");
         customerOrder = customer.gameObject.GetComponent(typeof(CustomerOrder)) as CustomerOrder;
         EvaluateDish(customerOrder);
-        Debug.Log(rating);
 
         //EatFood(customerOrder);
         customer.SetState(CustomerState.Leaving);

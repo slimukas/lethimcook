@@ -24,6 +24,15 @@ ModelImporter:
   - first:
       74: -4162879253641614772
     second: Character_IdleWaiting_01
+  - first:
+      74: -6715981394269773697
+    second: Character_IdleHolding_02
+  - first:
+      74: 885944232402757753
+    second: Armature|Action
+  - first:
+      74: -8945691123924629249
+    second: Armature|Idle
   externalObjects: {}
   materials:
     materialImportMode: 0
@@ -53,7 +62,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Character_Idle_01
+      name: Armature|Idle
       takeName: Armature|Idle
       internalID: 0
       firstFrame: 0
@@ -106,8 +115,116 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
+      transformMask:
+      - path: 
+        weight: 1
+      - path: 1
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone.001
+        weight: 1
+      - path: Armature/Bone/Bone.001/L_Shoulder
+        weight: 1
+      - path: Armature/Bone/Bone.001/L_Shoulder/L_Forearm
+        weight: 1
+      - path: Armature/Bone/Bone.001/L_Shoulder/L_Forearm/L_Elbo
+        weight: 1
+      - path: Armature/Bone/Bone.001/L_Shoulder/L_Forearm/L_Elbo/L_Elbo_end
+        weight: 1
+      - path: Armature/Bone/Bone.001/Neck
+        weight: 1
+      - path: Armature/Bone/Bone.001/Neck/Head
+        weight: 1
+      - path: Armature/Bone/Bone.001/Neck/Head/Head_end
+        weight: 1
+      - path: Armature/Bone/Bone.001/R_Shoulder
+        weight: 1
+      - path: Armature/Bone/Bone.001/R_Shoulder/R_Forearm
+        weight: 1
+      - path: Armature/Bone/Bone.001/R_Shoulder/R_Forearm/R_Elbo
+        weight: 1
+      - path: Armature/Bone/Bone.001/R_Shoulder/R_Forearm/R_Elbo/R_Elbo_end
+        weight: 1
+      - path: Armature/Bone/L_Hip
+        weight: 1
+      - path: Armature/Bone/L_Hip/L_Thigh
+        weight: 1
+      - path: Armature/Bone/L_Hip/L_Thigh/L_Leg
+        weight: 1
+      - path: Armature/Bone/L_Hip/L_Thigh/L_Leg/L_Leg_end
+        weight: 1
+      - path: Armature/Bone/R_Hip
+        weight: 1
+      - path: Armature/Bone/R_Hip/R_Thigh
+        weight: 1
+      - path: Armature/Bone/R_Hip/R_Thigh/R_Leg
+        weight: 1
+      - path: Armature/Bone/R_Hip/R_Thigh/R_Leg/R_Leg_end
+        weight: 1
+      - path: Armature/L_Elbo.001
+        weight: 1
+      - path: Armature/L_Elbo.001/L_Hand
+        weight: 1
+      - path: Armature/L_Elbo.001/L_Hand/L_Finger.01
+        weight: 1
+      - path: Armature/L_Elbo.001/L_Hand/L_Finger.01/L_Finger.01_end
+        weight: 1
+      - path: Armature/L_Elbo.001/L_Hand/L_Finger.02
+        weight: 1
+      - path: Armature/L_Elbo.001/L_Hand/L_Finger.02/L_Finger.02_end
+        weight: 1
+      - path: Armature/L_Elbo.001/L_Hand/L_Thumb
+        weight: 1
+      - path: Armature/L_Elbo.001/L_Hand/L_Thumb/L_Thumb_end
+        weight: 1
+      - path: Armature/L_Forearm.001
+        weight: 1
+      - path: Armature/L_Forearm.001/L_Forearm.001_end
+        weight: 1
+      - path: Armature/L_Leg.001
+        weight: 1
+      - path: Armature/L_Leg.001/L_Foot
+        weight: 1
+      - path: Armature/L_Leg.001/L_Foot/L_Foot_end
+        weight: 1
+      - path: Armature/L_Thigh.001
+        weight: 1
+      - path: Armature/L_Thigh.001/L_Thigh.001_end
+        weight: 1
+      - path: Armature/R_Elbo.001
+        weight: 1
+      - path: Armature/R_Elbo.001/R_Hand
+        weight: 1
+      - path: Armature/R_Elbo.001/R_Hand/R_Finger.01
+        weight: 1
+      - path: Armature/R_Elbo.001/R_Hand/R_Finger.01/R_Finger.01_end
+        weight: 1
+      - path: Armature/R_Elbo.001/R_Hand/R_Finger.02
+        weight: 1
+      - path: Armature/R_Elbo.001/R_Hand/R_Finger.02/R_Finger.02_end
+        weight: 1
+      - path: Armature/R_Elbo.001/R_Hand/R_Thumb
+        weight: 1
+      - path: Armature/R_Elbo.001/R_Hand/R_Thumb/R_Thumb_end
+        weight: 1
+      - path: Armature/R_Forearm.001
+        weight: 1
+      - path: Armature/R_Forearm.001/R_Forearm.001_end
+        weight: 1
+      - path: Armature/R_Leg.001
+        weight: 1
+      - path: Armature/R_Leg.001/R_Foot
+        weight: 1
+      - path: Armature/R_Leg.001/R_Foot/R_Foot_end
+        weight: 1
+      - path: Armature/R_Thigh.001
+        weight: 1
+      - path: Armature/R_Thigh.001/R_Thigh.001_end
+        weight: 1
+      maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
@@ -197,10 +314,68 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Character_IdleHolding_02
+      takeName: Armature|IdleHolding_02
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Action
+      takeName: Armature|Action
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.15
+    globalScale: 0.18
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -251,7 +426,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.15
+    globalScale: 0.18
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

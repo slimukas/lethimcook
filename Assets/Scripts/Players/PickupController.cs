@@ -29,7 +29,6 @@ public class PickupController : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, picupRange)
         && hit.collider.GetComponent<Rigidbody>() != null)
         {
-            Debug.Log(hit.collider.name);
             pickuopUiElement.SetActive(true);
             rayHit = true;
         }
