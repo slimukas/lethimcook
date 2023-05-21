@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class CustomerEatState : CustomerBaseState
@@ -10,18 +11,17 @@ public class CustomerEatState : CustomerBaseState
 
     public override void EnterState(CustomerStateManager customer)
     {
-        Debug.Log("Eating...");
-        customerOrder = customer.gameObject.GetComponent(typeof(CustomerOrder)) as CustomerOrder;
-        EvaluateDish(customerOrder);
 
-        //EatFood(customerOrder);
+        customerOrder = customer.gameObject.GetComponent(typeof(CustomerOrder)) as CustomerOrder;
+
+        EvaluateDish(customerOrder);
         customer.SetState(CustomerState.Leaving);
 
     }
 
+
     public override void UpdateState(CustomerStateManager customer)
     {
-
     }
 
     public override void OnCollisionEnter(CustomerStateManager customer)
@@ -53,8 +53,4 @@ public class CustomerEatState : CustomerBaseState
         Game.Current.room.AddScore(rating);
     }
 
-    private void EatFood(CustomerOrder customerOrder)
-    {
-
-    }
 }

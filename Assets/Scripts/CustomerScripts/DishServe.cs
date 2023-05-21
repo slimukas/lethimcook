@@ -17,15 +17,17 @@ public class DishServe : MonoBehaviour
         {
             if (customer.hadOrdered)
             {
-                GetPlateIngr(other.gameObject);
-                ingredient.preparedOrder = plateIngr;
-                other.GetComponent<PlateStates>().Dirty();
-                customer.SetState(CustomerState.Eating);
+                customer.animator.SetTrigger("Eating");
+                other.transform.parent = transform;
+                other.transform.localPosition = new Vector3(0, 0.05f, 0);
+                other.transform.rotation = new Quaternion(0, 0, 0, 0);
+                StartCoroutine(PlatePrep(other));
             }
         }
         else if (other.gameObject.tag == "Drink")
         {
             Destroy(other.gameObject);
+            customer.isMad = false;
             customer.SetState(CustomerState.Waiting);
         }
     }
@@ -34,4 +36,15 @@ public class DishServe : MonoBehaviour
     {
         plateIngr = plate.GetComponentInChildren<PlateAssemble>().onPlateObj;
     }
+
+    private IEnumerator PlatePrep(Collider other)
+    {
+        yield return new WaitForSeconds(2f);
+        other.transform.parent = null;
+        GetPlateIngr(other.gameObject);
+        ingredient.preparedOrder = plateIngr;
+        other.GetComponent<PlateStates>().Dirty();
+        customer.SetState(CustomerState.Eating);
+    }
+
 }

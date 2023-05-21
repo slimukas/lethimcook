@@ -5,14 +5,14 @@ using UnityEngine;
 public class CustomerLeavingState : CustomerBaseState
 {
     float t;
-    Vector3 startPosition;
-    Vector3 target;
+    Transform startPosition;
     float timeToReachTarget = 5f;
 
     public override void EnterState(CustomerStateManager customer)
     {
-        Debug.Log("Leaving...");
-        startPosition = customer.startPosition;
+        customer.animator.SetTrigger("Walk");
+
+        startPosition = customer.transform.parent.GetChild(0).transform;
         customer.timer.gameObject.SetActive(false);
 
     }
@@ -20,9 +20,9 @@ public class CustomerLeavingState : CustomerBaseState
     public override void UpdateState(CustomerStateManager customer)
     {
         t += Time.deltaTime / timeToReachTarget;
-        customer.transform.localPosition = Vector3.Lerp(new Vector3(0, 0, 0), startPosition, t);
-
-        if (customer.transform.localPosition == startPosition)
+        customer.transform.localPosition = Vector3.Lerp(new Vector3(0, 0, 0), startPosition.localPosition, t);
+        customer.transform.LookAt(startPosition);
+        if (customer.transform.localPosition == startPosition.localPosition)
         {
             GameObject.Destroy(customer.gameObject);
         }

@@ -16,7 +16,6 @@ public class CustomerOrderState : CustomerBaseState
 
     public override void EnterState(CustomerStateManager customer)
     {
-        Debug.Log("Ordering...");
         customer.hadOrdered = true;
         ingredient = customer.gameObject.GetComponent(typeof(CustomerOrder)) as CustomerOrder;
         orderTicket = customer.gameObject.GetComponent(typeof(OrderTicket)) as OrderTicket;

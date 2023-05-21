@@ -18,7 +18,6 @@ public class OrderTicket : MonoBehaviour
     {
         ticketNumber = orderTicket.transform.GetChild(orderTicket.transform.childCount - 1).GetChild(0).GetComponent<TMP_Text>();
         ticketNumber.text = ingredient.orderTicketNumber.ToString();
-        Debug.Log(orderTicket.transform.childCount + " ====" + (orderTicket.transform.childCount - 1));
 
         for (int i = 0; i < orderTicket.transform.childCount - 1; i++)
         {

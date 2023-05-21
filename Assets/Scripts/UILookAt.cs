@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class UILookAt : MonoBehaviour
 {
-    // [SerializeField] private Camera pcCamera;
+    private Camera cam;
 
+    private void Awake()
+    {
+        cam = Game.Current.pcCam;
+    }
     private void LateUpdate()
     {
-        // transform.LookAt(transform.position + pcCamera.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+        transform.rotation = Quaternion.LookRotation(cam.transform.forward);
     }
 }

@@ -15,7 +15,7 @@ public class CustomerWaitingState : CustomerBaseState
 
     public override void EnterState(CustomerStateManager customer)
     {
-        Debug.Log("Waiting...");
+        customer.transform.eulerAngles = new Vector3(0, -180, 0);
         waitTime = customer.waitTime;
         currenTime = waitTime;
         hadOrdered = customer.hadOrdered;
@@ -24,14 +24,31 @@ public class CustomerWaitingState : CustomerBaseState
         isLeaving = false;
 
         customer.canInteract = true;
+
+        if (hadOrdered)
+        {
+            customer.animator.SetTrigger("WaitingOrdered");
+        }
+        else
+        {
+            customer.animator.SetTrigger("Waiting");
+        }
     }
 
     public override void UpdateState(CustomerStateManager customer)
     {
         currenTime -= 1 * Time.deltaTime;
-
         customer.timer.color = Color.Lerp(Color.red, Color.green, currenTime / waitTime);
         customer.timer.fillAmount = currenTime / waitTime;
+
+        if (currenTime <= waitTime * 0.3f)
+        {
+            if (customer.isMad == false)
+            {
+                customer.animator.SetTrigger("Mad");
+                customer.isMad = true;
+            }
+        }
 
         if (currenTime <= 0 && isLeaving == false)
         {
@@ -40,9 +57,13 @@ public class CustomerWaitingState : CustomerBaseState
             customer.model.SetActive(false);
             GameObject.Destroy(customer.gameObject, 0.5f);
         }
+        if (customer.canInteract == false)
+            return;
+
         if (hadOrdered)
         {
             customer.canInteract = false;
+            customer.animator.SetTrigger("WaitingOrdered");
         }
     }
 

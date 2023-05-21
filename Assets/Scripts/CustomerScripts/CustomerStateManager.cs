@@ -8,6 +8,9 @@ public class CustomerStateManager : MonoBehaviour, IUsable
     // Serialized Fields
 
     [SerializeField] private Menu menu;
+    [SerializeField] private SkinnedMeshRenderer mesh;
+    [SerializeField] private Material[] materials;
+
 
     // Private fields
 
@@ -17,6 +20,7 @@ public class CustomerStateManager : MonoBehaviour, IUsable
 
     public Vector3 startPosition;
     public bool hadOrdered;
+    public bool isMad;
     public GameObject mealHolder;
     public float waitTime;
 
@@ -27,6 +31,9 @@ public class CustomerStateManager : MonoBehaviour, IUsable
     public Image timer;
     public ParticleSystem leaveVFX;
     public GameObject model;
+
+    public Animator animator;
+
     // Properties
 
 
@@ -77,7 +84,7 @@ public class CustomerStateManager : MonoBehaviour, IUsable
         hadOrdered = false;
         CustomerOrder = GetComponentInChildren<CustomerOrder>();
         OrderTicket = GetComponentInChildren<OrderTicket>();
-
+        mesh.material = materials[Random.Range(0, materials.Length)];
     }
 
     private void Update()

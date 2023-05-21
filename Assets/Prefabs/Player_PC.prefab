@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 458169283254611180}
   - component: {fileID: 458169283254611178}
   - component: {fileID: 458169283254611183}
+  - component: {fileID: 2092867774243517508}
   m_Layer: 0
   m_Name: Player_PC
   m_TagString: Player
@@ -192,6 +193,18 @@ MonoBehaviour:
   interactRange: 2
   interactIcon: {fileID: 3949047663163965265}
   Camera: {fileID: 458169283594984529}
+--- !u!114 &2092867774243517508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458169283254611169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b4f2ec973d6784183d9b368968eb07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &458169283594984533
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc218f27b6d18b04e9ac0c7a2a06b726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 200
+  mouseSensitivity: 700
   orientation: {fileID: 1979275850523585917}
 --- !u!114 &458169283594984542
 MonoBehaviour:
@@ -331,7 +344,7 @@ MonoBehaviour:
   holdArea: {fileID: 458169284333476404}
   holdAreaObj: {fileID: 458169284333476407}
   pickuopUiElement: {fileID: 9029831143327410720}
-  picupRange: 5
+  picupRange: 1.7
   pickupForce: 150
   animator: {fileID: 5591183970903160583}
 --- !u!1 &458169284285783155
@@ -779,7 +792,7 @@ Transform:
   m_GameObject: {fileID: 1169841110118823879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.661, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.15, y: 1.15, z: 1.15}
   m_Children:
   - {fileID: 8746883135026030768}
   - {fileID: 7477973970518310371}
