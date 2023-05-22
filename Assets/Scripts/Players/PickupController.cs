@@ -50,8 +50,6 @@ public class PickupController : MonoBehaviour
             else
             {
                 DropObject();
-
-
             }
         }
         else if (heldObj != null)
@@ -95,7 +93,7 @@ public class PickupController : MonoBehaviour
         }
     }
 
-    void DropObject()
+    public void DropObject()
     {
         animator.SetLayerWeight(1, 0f);
         heldObjRB.useGravity = true;

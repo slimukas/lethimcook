@@ -13,13 +13,13 @@ public class DishServe : MonoBehaviour
     {
         ingredient = customer.gameObject.GetComponent(typeof(CustomerOrder)) as CustomerOrder;
 
-        if (other.gameObject.tag == "Plate" && other.GetComponent<PlateStates>().isClean == true)
+        if (other.tag == "Plate" && other.GetComponent<PlateStates>().isClean == true && other.transform.parent == null)
         {
             if (customer.hadOrdered)
             {
                 customer.animator.SetTrigger("Eating");
                 other.transform.parent = transform;
-                other.transform.localPosition = new Vector3(0, 0.05f, 0);
+                other.transform.localPosition = new Vector3(0, 0.07f, 0);
                 other.transform.rotation = new Quaternion(0, 0, 0, 0);
                 StartCoroutine(PlatePrep(other));
             }
@@ -39,8 +39,8 @@ public class DishServe : MonoBehaviour
 
     private IEnumerator PlatePrep(Collider other)
     {
-        yield return new WaitForSeconds(2f);
         other.transform.parent = null;
+        yield return new WaitForSeconds(2f);
         GetPlateIngr(other.gameObject);
         ingredient.preparedOrder = plateIngr;
         other.GetComponent<PlateStates>().Dirty();
